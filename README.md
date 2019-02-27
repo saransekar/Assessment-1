@@ -2,11 +2,11 @@
 
 ### Overview
 
-> ATM machine that allows our customers to:
-	Cash withdrawals
-	Cash credit
-	Profile details
-	Check account balance
+> ATM machine that allows our customers to:<br/>
+	1.Cash withdrawals
+	2.Cash credit
+	3.Profile details
+	4.Check account balance
 
 #### Cash withdrawals:
 > when a user gets the money via debited and the remaining balance.
@@ -15,7 +15,7 @@
 #### Profile details:
 > If register username, mobile number, email and deposit amount and display user profile details.
 #### Check account balance
-> If a user wants to check the balance. Register username, mobile number, email, and deposit amount.
+> If a user wants to check the balance. Register username, mobile number, email and deposit amount.
 
 ### Prerequisites
 
