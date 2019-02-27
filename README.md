@@ -2,11 +2,11 @@
 
 ### Overview
 
-> ATM machine that allows our customers to:
-	* **Cash withdrawals**
-	* **Cash credit**
-	* **Profile details**
-	* **Check account balance**
+> ATM machine that allows our customers to:<br/>
+	- **Cash withdrawals**<br/>
+	- **Cash credit**<br/>
+	- **Profile details**<br/>
+	- **Check account balance**
 
 #### Cash withdrawals:
 > when a user gets the money via debited and the remaining balance.
