@@ -2,11 +2,11 @@
 
 ### Overview
 
-> ATM machine that allows our customers to:<br/>
-	1.Cash withdrawals
-	2.Cash credit
-	3.Profile details
-	4.Check account balance
+> ATM machine that allows our customers to:
+	* **Cash withdrawals**
+	* **Cash credit**
+	* **Profile details**
+	* **Check account balance**
 
 #### Cash withdrawals:
 > when a user gets the money via debited and the remaining balance.
@@ -24,6 +24,5 @@
 ### Usage 
  
 > Run in the command terminal start with python filename.
-
 	```python atm_machine.py```
 
