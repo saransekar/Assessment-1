@@ -14,22 +14,21 @@ def valid_inputs(pattern,message,error):
 		else:
 			print(error)	
 	return UserInput
-def instruct_manage_account():
-	"""Display instruction manage account"""	
+
+def instruct_manage_account():	
 	print("Please select any one below given:\n1.Check Your Balance\n2.Debit Amount")
 	print("3.Credit Amount\n4.Profile Details\n5.Exit")
-def get_money(Debit):
-	"""Get money from account 
-	Parameters:
-		Debit(int): Balance is subtracted to Debit and get total money"""
+
+def get_money(DebitMoney):
+	"""Debit money from the account and the remaining balance"""
 	global Balance
-	Balance = Balance - Debit  	
-def transfer_money(Credit):
-	"""Transfer money in the same account
-	Parameters:
-		Credit(int): Balance is added to credit and get total money"""		
+	Balance = Balance - DebitMoney  	
+	
+def transfer_money(CreditMoney):
+	"""Credit money in the same account and get total balance"""		
 	global Balance
-	Balance = Credit + Balance 	
+	Balance = CreditMoney + Balance 	
+	
 def manage_account():
 	"""Debit, Credit, Check balance and Profile details in managing account"""	
 	while True:
@@ -38,15 +37,15 @@ def manage_account():
 			if Option == 1:
 				print("Currently Your Available Balance:",Balance)
 			elif Option == 2:
-				Debit = int(input("Enter the Debit Amount:"))
-				if Balance >= Debit:						
-					get_money(Debit)							
+				DebitMoney = int(input("Enter the Debit Amount:"))
+				if Balance >= DebitMoney:						
+					get_money(DebitMoney)							
 					print(Balance)
 				else:
 					print("No Available Balance")								
 			elif Option == 3:
-				Credit = int(input("Enter the Credit Amount:"))
-				transfer_money(Credit)		
+				CreditMoney = int(input("Enter the Credit Amount:"))
+				transfer_money(CreditMoney)		
 				print(Balance)
 			elif Option == 4:
 				print("Profile Details\nUserName: {}\nMobileNumber: {}\nEmailId: {}\nAvailable Balance: {}".format(UserName,MobileNumber,Email,Balance)) 				
@@ -57,6 +56,7 @@ def manage_account():
 				print("Doesn't exist")
 		except (SyntaxError, ValueError):		
 			print("You didn't enter a number")	
+
 def main():
 	global UserName,MobileNumber,Email,Balance
 	UserName = valid_inputs("[a-zA-Z_][a-zA-Z0-9]*","Enter Your Name:","Invalid UserName")	
@@ -67,5 +67,6 @@ def main():
 	Balance = int(Balance)
 	instruct_manage_account()
 	manage_account()
+
 if __name__ == '__main__':
   main()  
